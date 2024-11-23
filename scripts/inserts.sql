@@ -10,12 +10,13 @@ INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbit
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (1, 'MERCU', 'Mercurio', 3.3e23, 'Roca', 2439, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (2, 'VENUS', 'Venus', 4.87e24, 'Roca y Nubes', 6051, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (3, 'EARTH', 'Tierra', 5.97e24, 'Roca y Agua', 6371, 9);
+INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (100, 'MOON', 'Luna', 5.97e11, 'Roca', 500, 3);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (4, 'MARS', 'Marte', 0.642e24, 'Roca', 3389, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (5, 'JUPYT', 'Jupiter', 1.9e27, 'Gas', 69911, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (6, 'SATUR', 'Saturno', 5.68e26, 'Gas', 58232, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (7, 'URANO', 'Urano', 8.68e25, 'Gas', 25362, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (8, 'NEPTN', 'Neptuno', 1.02e26, 'Gas', 24622, 9);
-INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (10, 'CERES', 'Ceres', 9.39e20, 'Roca', 473, 5);
+INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (10, 'CERES', 'Ceres', 9.39e20, 'Roca', 473, 9);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (11, 'EROS', 'Eros', 6.69e20, 'Roca', 517, 5);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (12, 'VESTA', 'Vesta', 2.59e20, 'Roca', 525, 5);
 INSERT INTO CUERPO_ESPACIAL (Id, Cod, Nombre, Masa, Composicion, Radio, Id_Orbita) VALUES (13, 'PALLS', 'Pallas', 2.11e20, 'Roca', 512, 5);
@@ -44,27 +45,27 @@ INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (18, 'X', 10);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (19, 'C', 1);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (20, 'X', 2);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (21, 'S', 3);
-INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (22, 'C', 1),
+INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (22, 'C', 1);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (23, 'X', 2);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (24, 'S', 3);
-INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (25, 'C', 1),
+INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (25, 'C', 1);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (26, 'X', 2);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (27, 'S', 3);
-INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (28, 'C', 1),
+INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (28, 'C', 1);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (29, 'X', 2);
 INSERT INTO ASTEROIDE (Id, Tipo_Espectral, Peligrosidad) VALUES (30, 'S', 3);
 
 -- INSERTS TABLA ESTRELLAS
-INSERT INTO CUERPO_ESPACIAL (Id, Temperatura, Luminosidad) VALUES (9, 5778, 10.8);
-INSERT INTO CUERPO_ESPACIAL (Id, Temperatura, Luminosidad) VALUES (31, 9940, 25.4);
+INSERT INTO ESTRELLA (Id, Temperatura, Luminosidad) VALUES (9, 5778, 10.8);
+INSERT INTO ESTRELLA (Id, Temperatura, Luminosidad) VALUES (31, 9940, 25.4);
 
 -- INSERTS TABLA AGUJERO NEGRO
-INSERT INTO AGUJERO_NEGRO (Id, Acreción) VALUES (32, 1023);
-INSERT INTO AGUJERO_NEGRO (Id, Acreción) VALUES (34, 1231);
-INSERT INTO AGUJERO_NEGRO (Id, Acreción) VALUES (35, 1);
-INSERT INTO AGUJERO_NEGRO (Id, Acreción) VALUES (36, 192);
-INSERT INTO AGUJERO_NEGRO (Id, Acreción) VALUES (37, 23);
-INSERT INTO AGUJERO_NEGRO (Id, Acreción) VALUES (38, 514);
+INSERT INTO AGUJERO_NEGRO (Id, Acrecion) VALUES (32, 1023);
+INSERT INTO AGUJERO_NEGRO (Id, Acrecion) VALUES (34, 1231);
+INSERT INTO AGUJERO_NEGRO (Id, Acrecion) VALUES (35, 1);
+INSERT INTO AGUJERO_NEGRO (Id, Acrecion) VALUES (36, 192);
+INSERT INTO AGUJERO_NEGRO (Id, Acrecion) VALUES (37, 23);
+INSERT INTO AGUJERO_NEGRO (Id, Acrecion) VALUES (38, 514);
 
 -- INSERTS TABLA PLANETA
 INSERT INTO PLANETA (Id, Atmosfera) VALUES (1, 'Nitrógeno, oxígeno, dióxido de carbono');
@@ -83,56 +84,85 @@ INSERT INTO PLANETA (Id, Atmosfera) VALUES (14, 'Dióxido de carbono, nitrógeno
 INSERT INTO PLANETA (Id, Atmosfera) VALUES (15, 'Nitrógeno, oxígeno, argón, vapor de agua');
 
 -- INSERTS PUERTO ESPACIAL
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("EARTH", 1, 100000, 2040, 6371);
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("EARTH", 2, 1092740, 2045, 6371);
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("EARTH", 3, 400, 2094, 473);
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("MARS", 1, 10740, 2059, 3389);
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("MARS", 2, 1000000, 2055, 3389);
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("CERES", 1, 100, 2071, 473);
-INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ("CERES", 2, 5000, 2074, 10000);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('EARTH', 1, 100000, 2040, 6371);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('EARTH', 2, 1092740, 2045, 6371);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('EARTH', 3, 400, 2094, 473);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('MARS', 1, 10740, 2059, 3389);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('MARS', 2, 1000000, 2055, 3389);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('CERES', 4, 100, 2071, 473);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('CERES', 2, 5000, 2074, 10000);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('MOON', 1, 500, 2064, 454);
+
 
 -- INSERTS NAVE TRIPULADA
-INSERT INTO NAVE_TRIPULADA (Id) VALUES (1);
-INSERT INTO NAVE_TRIPULADA (Id) VALUES (2);
-INSERT INTO NAVE_TRIPULADA (Id) VALUES (3);
-INSERT INTO NAVE_TRIPULADA (Id) VALUES (4);
+INSERT INTO NAVE_TRIPULADA (Id_Nave) VALUES (1);
+INSERT INTO NAVE_TRIPULADA (Id_Nave) VALUES (2);
+INSERT INTO NAVE_TRIPULADA (Id_Nave) VALUES (3);
+INSERT INTO NAVE_TRIPULADA (Id_Nave) VALUES (4);
+INSERT INTO NAVE_TRIPULADA (Id_Nave) VALUES (5);
+INSERT INTO NAVE_TRIPULADA (Id_Nave) VALUES (6);
 
 -- INSERTS MERCANCIA
-INSERT INTO MERCANCIA (Id, Cantidad_Carga) VALUES (1, 100);
-INSERT INTO MERCANCIA (Id, Cantidad_Carga) VALUES (2, 200);
+INSERT INTO MERCANCIA (Id, Id_Nave, Cantidad_Carga) VALUES (1, 1, 100);
+INSERT INTO MERCANCIA (Id, Id_Nave, Cantidad_Carga) VALUES (2, 2, 200);
 
 -- INSERTS BELICO
-INSERT INTO BELICO (Id, Cantidad_Armamento) VALUES (1, 1239);
-INSERT INTO BELICO (Id, Cantidad_Armamento) VALUES (2, 199);
+INSERT INTO BELICO (Id, Id_Nave, Cantidad_Armamento) VALUES (3, 3, 1239);
+INSERT INTO BELICO (Id, Id_Nave, Cantidad_Armamento) VALUES (4, 4, 199);
 
 -- INSERTS TRANSPORTE
-INSERT INTO BELICO (Id, Maximo_Pasajeros) VALUES (1, 3000);
-INSERT INTO BELICO (Id, Maximo_Pasajeros) VALUES (1, 5000);
+INSERT INTO TRANSPORTE (Id, Id_Nave, Maximo_Pasajeros) VALUES (5, 5, 3000);
+INSERT INTO TRANSPORTE (Id, Id_Nave, Maximo_Pasajeros) VALUES (6, 6, 4000);
 
 -- FALTAN!!!!!!!!!!!!!!!!!!!!!
 
 -- INSERTS TRIPULANTE
-INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ();
+INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('78949119', 'Yeray', 'Li');
+INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('49302182', 'Aitana', 'Ocaña');
+INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('17293819', 'David', 'Laguillo');
+INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('27485024', 'Ander', 'Amigorena');
+INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('77475884', 'Louis', 'San Miguel');
 
 -- INSERTS TRABAJADOR
-INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ();
+INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('78949119', 200000, 5);
+INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('77475884', 180000, 8);
+INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('17293819', 50000, 3);
+
 -- INSERTS VIAJERO
-INSERT INTO VIAJERO (DNI, Categoria, Equipaje) VALUES ();
+INSERT INTO VIAJERO (DNI, Categoria, Equipaje) VALUES ('27485024', 'Primera', 3);
 
 -- INSERTS ENCARGADO
-INSERT INTO ENCARGADO (DNI, Responsabilidad) VALUES ();
+INSERT INTO ENCARGADO (DNI, Responsabilidad) VALUES ('78949119', 'Mucha');
+
 -- INSERTS INGENIERO
-INSERT INTO INGENIERO (DNI, Especializacion) VALUES ();
+INSERT INTO INGENIERO (DNI, Especializacion) VALUES ('78949119', 'Electrónica');
+INSERT INTO INGENIERO (DNI, Especializacion) VALUES ('77747588', 'Mecánica');
+
 -- INSERTS INGENIERO_ENCARGADO
-INSERT INTO INGENIERO_ENCARGADO (DNI, Rango) VALUES ();
+INSERT INTO INGENIERO_ENCARGADO (DNI, Rango) VALUES ('78949119', '');
+
 -- INSERTS PILOTO
-INSERT INTO PILOTO (DNI, Licencia) VALUES ();
+INSERT INTO PILOTO (DNI, Licencia) VALUES ('49302182', 'A');
+
 -- INSERTS AZAFATO
-INSERT INTO AZAFATO (DNI, Primeros_Auxilios) VALUES ();
+INSERT INTO AZAFATO (DNI, Primeros_Auxilios) VALUES ('17293819', 'y');
+
 -- INSERTS IDIOMAS
-INSERT INTO IDIOMAS (DNI, Idioma) VALUES ();
+INSERT INTO IDIOMAS (DNI, Idioma) VALUES ('17293819', 'Castellano');
+INSERT INTO IDIOMAS (DNI, Idioma) VALUES ('17293819', 'Euskara');
 
 -- INSERTS VIAJE_ESPACIAL
-INSERT INTO VIAJE_ESPACIAL (Id, Fecha_Salida, Fecha_Llegada, Id_Puerto_Salida, Id_Cuerpo_Salida, Id_Puerto_Llegada, Id_Cuerpo_Llegada) VALUES ();
+INSERT INTO VIAJE_ESPACIAL (Id, Fecha_Salida, Fecha_Llegada, Id_Cuerpo_Salida, Id_Puerto_Salida, Id_Cuerpo_Llegada, Id_Puerto_Llegada) VALUES (
+    1,
+    '2124/06/28',
+    '2124/06/30',
+    'EARTH', 3,
+    'CERES', 2
+);
+
 -- INSERTS PARTICIPA
-INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES ();
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '78949119');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '49302182');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '17293819');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '27485024');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '77475884');
