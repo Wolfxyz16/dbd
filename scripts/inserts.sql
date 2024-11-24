@@ -122,24 +122,29 @@ INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('49302182', 'Aitana', 'Oc
 INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('17293819', 'David', 'Laguillo');
 INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('27485024', 'Ander', 'Amigorena');
 INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('77475884', 'Louis', 'San Miguel');
+INSERT INTO TRIPULANTE (DNI, Nombre, Apellido) VALUES ('77747588', 'Albert', 'Camus');
+
 
 -- INSERTS TRABAJADOR
 INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('78949119', 200000, 5);
 INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('77475884', 180000, 8);
 INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('17293819', 50000, 3);
+INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('77747588', 150000, 4);
+INSERT INTO TRABAJADOR (DNI, Salario, Experiencia) VALUES ('49302182', 14000, 1);
+
 
 -- INSERTS VIAJERO
 INSERT INTO VIAJERO (DNI, Categoria, Equipaje) VALUES ('27485024', 'Primera', 3);
 
 -- INSERTS ENCARGADO
-INSERT INTO ENCARGADO (DNI, Responsabilidad) VALUES ('78949119', 'Mucha');
+INSERT INTO ENCARGADO (DNI, Responsabilidad) VALUES ('78949119', 3);
 
 -- INSERTS INGENIERO
 INSERT INTO INGENIERO (DNI, Especializacion) VALUES ('78949119', 'Electrónica');
 INSERT INTO INGENIERO (DNI, Especializacion) VALUES ('77747588', 'Mecánica');
 
 -- INSERTS INGENIERO_ENCARGADO
-INSERT INTO INGENIERO_ENCARGADO (DNI, Rango) VALUES ('78949119', '');
+INSERT INTO INGENIERO_ENCARGADO (DNI, Rango) VALUES ('78949119', 'Director');
 
 -- INSERTS PILOTO
 INSERT INTO PILOTO (DNI, Licencia) VALUES ('49302182', 'A');
@@ -152,12 +157,20 @@ INSERT INTO IDIOMAS (DNI, Idioma) VALUES ('17293819', 'Castellano');
 INSERT INTO IDIOMAS (DNI, Idioma) VALUES ('17293819', 'Euskara');
 
 -- INSERTS VIAJE_ESPACIAL
-INSERT INTO VIAJE_ESPACIAL (Id, Fecha_Salida, Fecha_Llegada, Id_Cuerpo_Salida, Id_Puerto_Salida, Id_Cuerpo_Llegada, Id_Puerto_Llegada) VALUES (
+INSERT INTO VIAJE_ESPACIAL (ID, Fecha_Salida, Fecha_Llegada, Id_Cuerpo_Salida, Id_Puerto_Salida, Id_Cuerpo_Llegada, Id_Puerto_Llegada) VALUES (
     1,
-    '2124/06/28',
-    '2124/06/30',
+    TO_DATE('2124/06/28', 'YYYY/MM/DD'),
+    TO_DATE('2124/06/30', 'YYYY/MM/DD'),
     'EARTH', 3,
     'CERES', 2
+);
+
+INSERT INTO VIAJE_ESPACIAL (ID, Fecha_Salida, Fecha_Llegada, Id_Cuerpo_Salida, Id_Puerto_Salida, Id_Cuerpo_Llegada, Id_Puerto_Llegada) VALUES (
+    2,
+    TO_DATE('2124/05/2', 'YYYY/MM/DD'),
+    TO_DATE('2124/05/14', 'YYYY/MM/DD'),
+    'MARS', 1,
+    'MOON', 1
 );
 
 -- INSERTS PARTICIPA
@@ -166,3 +179,9 @@ INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '49302182');
 INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '17293819');
 INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '27485024');
 INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (1, 6, '77475884');
+
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (2, 1, '78949119');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (2, 1, '49302182');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (2, 1, '17293819');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (2, 2, '27485024');
+INSERT INTO PARTICIPA (Id_Viaje, Id_Nave, DNI) VALUES (2, 2, '77475884');

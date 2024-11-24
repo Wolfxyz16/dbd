@@ -1,6 +1,6 @@
--- Vista 1: Información de vuelos con carga máxima
+-- Vista 1: Información de vuelos de mercancías con carga máxima
 CREATE OR REPLACE VIEW Vuelos_Con_Maxima_Carga AS
-SELECT 
+SELECT DISTINCT
     v.Id AS Codigo_Viaje, 
     v.Fecha_Salida, 
     v.Fecha_Llegada,
@@ -34,22 +34,6 @@ CONNECT BY PRIOR c.Id = Id_Orbita;
 
 SELECT * FROM Puertos_Espaciales_Sol;
 
--- Vista 4: Vuelos por tipo de nave, esta no tiene mucho sentido
-CREATE OR REPLACE VIEW Vista_Vuelos_Tipo_Nave AS
-SELECT 
-    v.Id AS Codigo_Viaje,
-    v.Fecha_Salida,
-    v.Fecha_Llegada,
-    CASE
-        WHEN n.Id_Nave IS NOT NULL THEN 'Belico'
-        WHEN n.Id_Nave IS NOT NULL THEN 'Transporte'
-        WHEN n.Id_Nave IS NOT NULL THEN 'M'
-        ELSE 'No Especificado'
-    END AS Tipo_Nave
-FROM VIAJE_ESPACIAL v JOIN NAVE_TRIPULADA n ON v.Id = n.Id_Nave;
-
-SELECT * FROM Vista_Vuelos_Tipo_Nave ;
-
 
 -- 2. Restrinciones de integridad
 -- Restricción 1: Validar fecha de llegada mayor a la de salida
@@ -65,16 +49,11 @@ ADD CONSTRAINT chk_capacidad_carga CHECK (Cantidad_Carga <= 10000);
 INSERT INTO MERCANCIA VALUES (1, 1, 9999999);
 
 -- Restricción 3: Asegurar que el codigo de los puertos espaciales no tenga ningún guión
-ALTER TABLE CUERPO_ESPACIAL
-ADD CONSTRAIT chk_cod CHECK (REGEXP_LIKE(Cod_Cuerpo, '^[^-]*$'));
+ALTER TABLE PUERTO_ESPACIAL
+ADD CONSTRAINT chk_cod CHECK (REGEXP_LIKE(Cod_Cuerpo, '^[^-]*$'));
 
-INSERT INTO CUERPO_ESPACIAL VALUES ('ABC-1', 3, 100, 1998, 1000);
+INSERT INTO PUERTO_ESPACIAL (Cod_Cuerpo, Id_Puerto, Capacidad, Anio_Inauguracion, Distancia) VALUES ('ABC-1', 3, 100, 1998, 1000);
 
--- Restricción 4: Asegurar que la categoria de los viajeros sea válida
-ALTER TABLE VIAJERO
-ADD CONSTRAIT chk_category CHECK (Categoria IN ('Económica', 'Ejecutiva', 'Primera', 'Militar'));
-
-INSERT INTO VIAJERO VALUES ('78949119', 'Bussiness', 3);
 
 -- 3. Disparadores
 -- Disparador 1: Notificar cambio en el salario de un trabajador
@@ -103,13 +82,12 @@ BEGIN
     END IF;
 END;
 
--- Hay que retocar este
 -- Disparador 3: Registrar la fecha de última actualización de un puerto PUERTO_ESPACIAL
 CREATE OR REPLACE TRIGGER trg_actualizar_fecha_puerto
 AFTER UPDATE ON PUERTO_ESPACIAL
 FOR EACH ROW
 BEGIN
     UPDATE PUERTO_ESPACIAL
-    SET Ultima_Modificacion = EXTRACT(YEAR FROM SYSDATE)
+    SET Ultima_Modificacion = SYSDATE
     WHERE ID_Puerto = :NEW.ID_Puerto;
 END;
